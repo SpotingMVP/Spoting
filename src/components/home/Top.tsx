@@ -2,7 +2,6 @@
 import { useModalStore } from '@/store/modal.store';
 import React from 'react';
 import { IoLogoApple } from 'react-icons/io5';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const Top = () => {
@@ -21,94 +20,56 @@ const Top = () => {
       />
 
       <div className="max-w-[1440px] w-full mx-auto mt-[100px] relative">
-        <motion.div
-          initial={{ opacity: 0, translateX: -90 }}
-          transition={{
-            duration: 0.2,
-            ease: 'easeIn'
-          }}
-          animate={{
-            opacity: 1,
-            translateX: 0
-          }}>
-          <div className="sm:hidden px-4">
-            <div className="text-[24px] font-extrabold ">건강한 만남,</div>
-            <div className="text-[24px] font-extrabold ">
-              <span className="text-[#325EFF]">함께 운동</span> 하세요
-            </div>
+        <div className="sm:hidden px-4">
+          <div className="text-[24px] font-extrabold ">건강한 만남,</div>
+          <div className="text-[24px] font-extrabold ">
+            <span className="text-[#325EFF]">함께 운동</span> 하세요
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, translateX: -90 }}
-          transition={{
-            duration: 0.3,
-            ease: 'easeIn'
-          }}
-          animate={{
-            opacity: 1,
-            translateX: 0
-          }}>
-          <div className="flex items-center justify-center relative">
-            <div className="hidden sm:block absolute left-0 text-[64px] text-[#313131] font-extrabold">
-              건강한 만남,
-            </div>
+        </div>
 
-            <Image
-              src="/images/phone.png"
-              alt="phone"
-              width={700}
-              height={600}
-              priority
-            />
-
-            <div className="hidden sm:block absolute right-0 text-[64px] text-[#313131] font-extrabold">
-              <span className="text-[#325EFF]">함께 운동</span> 하세요
-            </div>
+        <div className="flex items-center justify-center relative">
+          <div className="hidden sm:block absolute left-0 text-[64px] text-[#313131] font-extrabold">
+            건강한 만남,
           </div>
-        </motion.div>
+
+          <Image src="/images/phone.png" alt="phone" width={700} height={600} priority />
+
+          <div className="hidden sm:block absolute right-0 text-[64px] text-[#313131] font-extrabold">
+            <span className="text-[#325EFF]">함께 운동</span> 하세요
+          </div>
+        </div>
       </div>
 
       <div className="flex items-center justify-center mt-[26px] z-[30]">
         <img src="/images/shadow.svg" alt="" className="z-[30]" />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, translateX: -90 }}
-        transition={{
-          duration: 0.5,
-          ease: 'easeIn',
-          delay: 0.7
-        }}
-        animate={{
-          opacity: 1,
-          translateX: 0
-        }}>
-        <div className="px-4 flex justify-center items-center gap-[30px] mt-[22px] sm:px-0 sm:mt-[52px]">
-          <div
-            onClick={() => {
-              setOpen(true);
-              setModalType('prepare');
-            }}
-            className="z-[30] shadow-sm cursor-pointer w-[246px] h-[65px] rounded-xl flex items-center justify-center gap-[10px] bg-gray-900 text-xl text-white font-bold ">
-            <div>
-              <IoLogoApple color="white" size={30} />
-            </div>
-            <div>App Store</div>
+      <div className="px-4 flex justify-center items-center gap-[30px] mt-[22px] sm:px-0 sm:mt-[52px]">
+        <div
+          onClick={() => {
+            setOpen(true);
+            setModalType('prepare');
+          }}
+          className="z-[30] shadow-sm cursor-pointer w-[246px] h-[65px] rounded-xl flex items-center justify-center gap-[10px] bg-gray-900 text-xl text-white font-bold ">
+          <div>
+            <IoLogoApple color="white" size={30} />
           </div>
-
-          <div
-            onClick={() => {
-              setOpen(true);
-              setModalType('prepare');
-            }}
-            className="z-[30] shadow-sm cursor-pointer w-[246px] h-[65px] rounded-xl flex items-center justify-center gap-[10px] bg-gray-900 text-xl text-white font-bold">
-            <div>
-              <img src="/images/playstore.png" alt="playstore" className="w-6" />
-            </div>
-            <div>Google Play</div>
-          </div>
+          <div>App Store</div>
         </div>
-      </motion.div>
+
+        <div
+          onClick={() => {
+            setOpen(true);
+            setModalType('prepare');
+          }}
+          className="z-[30] shadow-sm cursor-pointer w-[246px] h-[65px] rounded-xl flex items-center justify-center gap-[10px] bg-gray-900 text-xl text-white font-bold">
+          <div>
+            <img src="/images/playstore.png" alt="playstore" className="w-6" />
+          </div>
+          <div>Google Play</div>
+        </div>
+      </div>
+
       <div className="mt-[60px] sm:mt-[78px] flex flex-col sm:flex-row items-center justify-center gap-[29px]">
         <div className="bg-[#EAF3FF] py-[23px] px-[33px] rounded-[10px] max-w-[400px] w-full">
           <div className="text-[24px] text-[#0029BD] font-extrabold sm:font-bold">
