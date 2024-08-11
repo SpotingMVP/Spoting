@@ -3,6 +3,7 @@ import { useModalStore } from '@/store/modal.store';
 import React from 'react';
 import { IoLogoApple } from 'react-icons/io5';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Top = () => {
   const { setModalType, setOpen } = useModalStore();
@@ -51,40 +52,25 @@ const Top = () => {
             <div className="hidden sm:block absolute left-0 text-[64px] text-[#313131] font-extrabold">
               건강한 만남,
             </div>
-            <motion.div
-              initial={{ opacity: 0, translateY: -90 }}
-              transition={{
-                duration: 0.5,
-                ease: 'backInOut',
-                delay: 0.3
-              }}
-              animate={{
-                opacity: 1,
-                translateY: 0
-              }}>
-              <img src="/images/phone.png" alt="" />
-            </motion.div>
+
+            <Image
+              src="/images/phone.png"
+              alt="phone"
+              width={700}
+              height={600}
+              priority
+            />
+
             <div className="hidden sm:block absolute right-0 text-[64px] text-[#313131] font-extrabold">
               <span className="text-[#325EFF]">함께 운동</span> 하세요
             </div>
           </div>
         </motion.div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, translateY: -90 }}
-        transition={{
-          duration: 0.5,
-          ease: 'backInOut',
-          delay: 0.3
-        }}
-        animate={{
-          opacity: 1,
-          translateY: 0
-        }}>
-        <div className="flex items-center justify-center mt-[26px] z-[30]">
-          <img src="/images/shadow.svg" alt="" className="z-[30]" />
-        </div>
-      </motion.div>
+
+      <div className="flex items-center justify-center mt-[26px] z-[30]">
+        <img src="/images/shadow.svg" alt="" className="z-[30]" />
+      </div>
 
       <motion.div
         initial={{ opacity: 0, translateX: -90 }}

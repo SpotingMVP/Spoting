@@ -37,7 +37,7 @@ const CompanyIndex = () => {
   }, []);
 
   return (
-    <div className="mt-[66px] sm:mt-[76px] bg-black">
+    <div className="mt-[66px] sm:mt-[76px] bg-black overflow-x-hidden">
       <First />
       <Second />
       <Third />

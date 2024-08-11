@@ -68,13 +68,21 @@ const Section = ({ children, delay = 0 }: SectionType) => {
 
 const First = () => {
   return (
-    <div
-      style={{ imageRendering: '-webkit-optimize-contrast' }}
-      className="overflow-x-hidden relative w-full h-[1400px] sm:h-[1400px] bg-[url('/images/basket.svg')] bg-cover bg-center bg-no-repeat">
+    <div className="overflow-x-hidden relative w-full h-[1400px] sm:h-[1400px]">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/basket.svg"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          quality={70}
+          priority
+        />
+      </div>
       <div className="hidden sm:block absolute sm:top-[350px] left-0 right-0 text-center sm:text-[64px] sm:font-bold text-white">
         스포팅은 <span className="text-[#00BEFF]">생활 체육</span>의 가치에 주목합니다.
       </div>
-      <div className="sm:hidden absolute top-[100px] left-0 right-0 text-center text-[34px] font-extrabold  text-white">
+      <div className="sm:hidden absolute top-[100px] left-0 right-0 text-center text-[34px] font-extrabold text-white">
         <div>
           스포팅은 <span className="text-[#00BEFF]">생활 체육</span>의 가치에
         </div>
@@ -101,9 +109,7 @@ const First = () => {
                     className="w-[320px] max-w-max max-h-max"
                   />
                 </div>
-                <div className="absolute top-[126px] left-[111px]  text-[40px] font-bold text-white">
-                  71.3%
-                </div>
+
                 <div className="text-[18px] font-normal text-white">
                   운동 약속을 잡는데 어려움을 겪은 비율
                 </div>
@@ -116,9 +122,7 @@ const First = () => {
                     className="w-[320px] max-w-max max-h-max"
                   />
                 </div>
-                <div className="absolute top-[128px] left-[120px]  text-[40px] font-bold text-white">
-                  98%
-                </div>
+
                 <div className="text-[18px] font-normal text-white">
                   함께 운동 하는 것에 대한 선호 비율
                 </div>
@@ -143,9 +147,7 @@ const First = () => {
                   className="w-[250px] max-w-max max-h-max"
                 />
               </div>
-              <div className="absolute top-[100px] left-[101px]  text-[30px] font-bold text-white">
-                71.3%
-              </div>
+
               <div className="text-[18px] font-[800] sm:font-bold text-gray-50 sm:text-white">
                 운동 약속을 잡는데 어려움을 겪은 비율
               </div>
@@ -162,9 +164,7 @@ const First = () => {
                   className="w-[250px] max-w-max max-h-max"
                 />
               </div>
-              <div className="absolute top-[100px] left-[106px]  text-[30px] font-bold text-white">
-                98%
-              </div>
+
               <div className="text-[18px] font-[800] sm:font-bold text-gray-50 sm:text-white">
                 함께 운동 하는 것에 대한 선호 비율
               </div>
