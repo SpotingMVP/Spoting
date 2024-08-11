@@ -2,6 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import First from './First';
 import ToTop from '../common/ToTop';
+import dynamic from 'next/dynamic';
+
+const Second = dynamic(() => import('./Second'), { ssr: false });
+const Slider = dynamic(() => import('./Slider'), { ssr: false });
 
 const debounce = (func, wait) => {
   let timeout;
@@ -35,7 +39,8 @@ const CustomerIndex = () => {
   return (
     <div className="mt-[66px] sm:mt-[76px]">
       <First />
-
+      <Second />
+      <Slider />
       {showToTop && <ToTop />}
     </div>
   );
