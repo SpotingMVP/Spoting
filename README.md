@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Spoting - 건강한 만남, 함께 운동 하세요
 
-## Getting Started
+![](https://velog.velcdn.com/images/banghogu/post/a938b6e2-4c36-435b-bcb4-79c30242497c/image.png)
+<br/>
+<br/>
 
-First, run the development server:
+## 🔗 프로젝트 링크
+[Spoting 바로가기](https://www.spoting.site/)
+  
+  <br />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📖 프로젝트 소개
+
+- 해당 Spoting 프로젝트는 2024 블레이버스 해커톤에서 랜딩페이지 제작을 목표로 진행된 프로젝트입니다. <br /><br />
+- Home, Company, Customer Center 섹션에 맞춰 각기 다른 콘텐츠를 Framer를 활용하여 동적으로 구성하였으며, 직관적이고 유려한 사용자 경험을 제공하는 데 중점을 두었습니다. <br /><br />
+- 데스크톱뿐만 아니라 모바일 환경에서도 완벽하게 반응형으로 작동하도록 구현되어, 다양한 디바이스에서 원활하게 접근이 가능합니다. 또한, 프로젝트 전반에 걸쳐 성능 최적화와 사용자 인터페이스(UI) 디자인에도 세심한 주의를 기울였습니다. <br /><br />
+
+<br/>
+
+## Tech Stack
+
+![](https://velog.velcdn.com/images/banghogu/post/8f8ec817-6208-4a5e-a2e0-a32303a9e83e/image.png)
+
+<br/><br/>
+
+## 🕹️ 기술적 성취
+
+- 이번 Spoting 프로젝트에서는 기획부터 디자인까지의 전 과정을 짧은 시간 내에 완성하여 랜딩 페이지를 개발하는 경험을 쌓았습니다. CI/CD 파이프라인을 구축하고 Vercel을 사용해 빌드 및 도메인 연결 작업을 수행하여, 자동화된 배포 환경을 구현했습니다.<br /><br />
+- 프로젝트의 핵심 과제 중 하나는 단일 페이지 내에서 여러 탭 상태(Tap State)에 따라 화면이 동적으로 변경되는 구조였습니다. 초기 진입 시, 모든 탭 상태에 따른 코드를 한 번에 렌더링하면서 성능 문제가 발생하고 사용자 경험이 저하되는 이슈가 있었습니다. 이를 해결하기 위해 Next.js의 Dynamic Import를 활용하여 Lazy Loading을 구현, 뷰포트에 들어오는 콘텐츠만 렌더링하도록 개선했습니다.<br /><br />
+- Next.js의 Next Image 기능을 활용해 이미지 최적화를 수행하여, 빠른 로딩 속도와 최적화된 사용자 경험을 제공했습니다. 새로고침 시 탭 상태가 초기화되는 문제도 있었지만, Zustand Persist를 사용하여 페이지를 새로고침해도 탭 상태가 유지되도록 하여 사용자 경험을 향상시켰습니다.<br /><br />
+- 새로고침 시 Tap State가 초기화 되는 문제를 Zustand Persist를 이용하여 새로고침 되어도, 해당 Tap State를 유지하여 기존 Tap 화면을 볼 수 있도록 사용자 경험 향상시켰습니다.<br />
+
+
+<br/><br/>
+## Team Convention
+
+| 태그                  | 설명                                                                      |
+| --------------------- | ------------------------------------------------------------------------- |
+| `feat: `             | 새로운 기능 추가 및 개선                                                |
+| `style: `              | 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우                                                         |
+| `design: `           | CSS 등 사용자 UI 디자인 변경                                              |
+| `fix: `              | 기존 기능 수정 (주로 안 좋았던 것에서 좋은 것으로)                                                   |
+| `bug: `          | 버그 수정                                    |
+| `refactor: `            | 결과의 변경 없이 코드의 구조를 재조정한 경우                     |
+| `test: `         |  테스트 코드 추가                                                   |
+| `docs: `          | 코드가 아닌 문서를 수정한 경우                                                |
+| `remove: `             | 파일을 삭제하는 작업만 수행                                                      |
+| `rename: `             | 파일 또는 폴더명을 수정하거나 위치(경로)를 변경                      |
+| `asset: `            | 이미지 등 assets 파일 추가 |
+| `chore: `           | 그 외 기타 수정                      |
+
+<br/>
+
+## Script
+
+앱 실행
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+$ npm run build
+$ npm run dev
+```
